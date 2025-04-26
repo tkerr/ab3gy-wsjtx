@@ -50,6 +50,7 @@ import socket
 import sys
 
 # Local packages.
+import _env_init
 import decode
 import encode
 from QColor import QColor
@@ -106,17 +107,8 @@ class wsjtxmon (object):
         
         Parameters
         ----------
-        ip_addr : str
-            The local IP address to monitor.  
-            WSJT-X must be configured to send packets to this address.
-        ip_port : int
-            The local port number to monitor.
-            WSJT-X must be configured to send packets to this port.
         verbose : bool
             Prints verbose debug messages if True.
-        timeout : int
-            The socket listen timeout in seconds.
-            WSJT-X is expected to send UDP packets at least every 15 seconds.
         
         Returns
         -------
